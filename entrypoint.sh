@@ -5,7 +5,7 @@ min=5
 if [ -n "$INTERVAL" ]; then
 	min=$INTERVAL
 fi
-(crontab -l ; echo "*/2 * * * * python /usr/src/app/main.py") | crontab -
+(crontab -l ; echo "*/$min * * * * python /usr/src/app/main.py") | crontab -
 
 # docker secret
 if [ -n "$MYSQL_DB_PASS_FILE" ]; then
